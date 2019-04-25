@@ -16,23 +16,34 @@
       const mountNode = document.getElementById("root");
       //   const name = "Josh Perez";
       //   const element = <h1>Hello, {name}</h1>;
-      function formatName(user) {
-        return user.firstName + " " + user.lastName;
-      }
-      function getGreeting(user) {
-        if (user) {
-          return <h1>Hello, {formatName(user)}!</h1>;
-        }
-        return <h1>Hello, Stranger.</h1>;
-      }
-      const user = {
-        firstName: "Harper",
-        lastName: "Perez"
-      };
+      //   function formatName(user) {
+      //     return user.firstName + " " + user.lastName;
+      //   }
+      //   function getGreeting(user) {
+      //     if (user) {
+      //       return <h1>Hello, {formatName(user)}!</h1>;
+      //     }
+      //     return <h1>Hello, Stranger.</h1>;
+      //   }
+      //   const user = {
+      //     firstName: "Harper",
+      //     lastName: "Perez"
+      //   };
 
-      const element = <h1>{getGreeting()}</h1>;
+      //   const element = <h1>{getGreeting()}</h1>;
 
-      ReactDOM.render(element, mountNode);
+      function tick() {
+        const element = (
+          <div>
+            <h1>Hello, world!</h1>
+            <h2>It is {new Date().toLocaleTimeString()}</h2>
+          </div>
+        );
+        ReactDOM.render(element, mountNode);
+      }
+      //ReactDOM.render(element, mountNode);
+
+      setInterval(tick, 1000);
     </script>
   </body>
 </html>
